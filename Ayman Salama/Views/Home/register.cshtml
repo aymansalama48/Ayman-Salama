@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    
+    
+    
+    
+</head>
+<body>
+
+    <div class="Ayman">
+
+        <div class="A1">
+
+            <a asp-controller="Home" asp-action="Index">
+
+                <h1 class="animate__heartBeat">Ayman Salama</h1>
+
+
+            </a>
+        </div>
+
+
+
+
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+        <center>
+
+            <div class="A2_Navbar">
+                <!-- روابط التنقل -->
+                <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="Home" asp-action="Index">🏠 الرئيسية</a>
+                    <a asp-controller="Home" asp-action="About">👤 من أنا</a>
+                    <a asp-controller="Home" asp-action="Skills">🧠 المهارات</a>
+                    <a asp-controller="Home" asp-action="Projects">📁 المشاريع</a>
+                    <a asp-controller="Home" asp-action="Goals">🎯 الأهداف</a>
+                    <a asp-controller="Home" asp-action="Contact" class="active">📬 تواصل معنا</a>
+                </div>
+            </div>
+
+
+        </center>
+        <br>
+    <div class="A3_Intro">
+        <h2 style="font-size: 30px;">أنشئ حسابك الآن وابدأ رحلتك معنا!</h2>
+            <p>يرجى إدخال بياناتك لإنشاء حساب جديد. إذا كان لديك حساب بالفعل يمكنك <a asp-action="Login" style="color:#00000070; text-decoration: none;">تسجيل الدخول</a></p>
+    </div>
+    <div class="main-content">
+        <div class="login-container">
+            <h2>إنشاء حساب جديد</h2>
+            <br><br>
+            <form action="dashboard.html" method="POST">
+
+                <div class="form-group">
+                    <input type="text" id="fullname" name="fullname" placeholder="الاسم الكامل" required>
+                </div>
+                
+
+
+
+
+   <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                </div>
+
+
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="تأكيد كلمة المرور" required>
+                </div>
+                <button type="submit" class="login-button">إنشاء الحساب</button>
+            </form>
+            <div class="options">
+                    <a asp-action="Login" class="login-link">لديك حساب؟ تسجيل الدخول</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="A6_Footer">
+    <div class="A5_Marque">
+        <marquee behavior="" direction="right">
+            مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.
+        </marquee>
+        <br><br>
+        <p class="custom-paragraph">
+            نحن نُعتبر الخيار الأمثل لعملائنا الباحثين عن تطبيقات تقنية متقدمة وخدمات احترافية. كما تضمن شركتنا تلبية احتياجات العملاء وتقديم حلول مبتكرة تساعدهم على النجاح في العالم الرقمي.
+        </p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ayman.salama.48" target="_blank" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/1501435003" target="_blank" class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <br><br><br>
+    </div>
+    <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+</footer>
+</body>
+
+
+
+
+</html>
+
+

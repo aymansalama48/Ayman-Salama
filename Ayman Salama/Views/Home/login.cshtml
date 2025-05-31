@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+
+
+    <div class="login-button-container">
+    </div>
+</head>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------  -->
+
+<body>
+
+    <div class="Ayman">
+
+        <div class="A1">
+
+            <a asp-controller="Home" asp-action="Index">
+
+                <h1 class="animate__heartBeat">Ayman Salama</h1>
+
+
+            </a>
+        </div>
+
+
+
+
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+        <center>
+
+            <div class="A2_Navbar">
+                <!-- روابط التنقل -->
+                <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="Home" asp-action="Index">🏠 الرئيسية</a>
+                    <a asp-controller="Home" asp-action="About">👤 من أنا</a>
+                    <a asp-controller="Home" asp-action="Skills">🧠 المهارات</a>
+                    <a asp-controller="Home" asp-action="Projects">📁 المشاريع</a>
+                    <a asp-controller="Home" asp-action="Goals">🎯 الأهداف</a>
+                    <a asp-controller="Home" asp-action="Contact" class="active">📬 تواصل معنا</a>
+                </div>
+            </div>
+
+
+        </center>
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+
+        <div class="A3_Intro">
+
+            <h2 style="font-size: 30px;">سجّل دخولك الآن وابدأ في إدارة خدماتك بكل سهولة وكفاءة.</h2>
+
+
+            <p>
+                برجاء إدخال بياناتك لتسجيل الدخول إلى حسابك. إذا لم يكن لديك حساب، يمكنك إنشاء حساب جديد
+            </p>
+        </div>
+
+
+        <div class="main-content">
+
+
+
+
+
+            <div class="login-container">
+                <h2>تسجيل الدخول</h2>
+
+
+
+
+
+
+
+                <br>
+                <br>
+                <form action="../dashboard/dashboard.html" method="POST">
+                    <div class="form-group">
+
+                        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+                    </div>
+                    <button type="submit" class="login-button">تسجيل الدخول</button>
+                </form>
+                <div class="options">
+                    <a asp-action="register" class="register-link">إنشاء حساب جديد</a>
+                    <a href="forgot-password.html" class="forgot-password-link">نسيت كلمة المرور؟</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <footer class="A6_Footer">
+
+        <div class="A5_Marque">
+
+            <marquee behavior="" direction="right">
+                مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.
+            </marquee>
+            <br>
+            <br>
+
+            <p class="custom-paragraph">
+                نحن نُعتبر الخيار الأمثل لعملائنا الباحثين
+                عن تطبيقات تقنية متقدمة وخدمات
+                احترافية. كما تضمن شركتنا تلبية
+                احتياجات العملاء وتقديم حلول مبتكرة
+                تساعدهم على النجاح في العالم
+                الرقمي.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ayman.salama.48" target="_blank" class="facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/1501435003" target="_blank" class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+
+
+</body>
+<!-- ----------------------------------------------------------  -->
+
+</html>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------  -->
+
+<style>
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل الملف الشخصي</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .about-container {
+            background-color: #222c;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            color: #fff;
+            width: 450px;
+            max-width: 95vw;
+            margin: 0 auto 40px auto !important;
+            float: none;
+        }
+        .about-container h2 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .about-container .form-group {
+            margin-bottom: 18px;
+        }
+        .about-container label {
+            display: block;
+            margin-bottom: 6px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .about-container input[type="text"],
+        .about-container input[type="email"],
+        .about-container input[type="file"],
+        .about-container textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .about-container input[type="file"] {
+            background: #f7f7f7;
+            color: #222;
+            padding: 8px 12px;
+        }
+        .about-container input:focus,
+        .about-container textarea:focus {
+            border-color: #25d366;
+            outline: none;
+        }
+        .about-container button.login-button {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            justify-content: flex-end;
+        }
+        .form-actions .login-button {
+            width: auto;
+            min-width: 120px;
+        }
+        .form-actions .cancel-btn {
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            padding: 8px 28px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .form-actions .cancel-btn:hover {
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+<div class="Ayman">
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <center>
+        <div class="A2_Navbar">
+            <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <!-- ========= مقدمة الصفحة ========= -->
+    <div class="A3_Intro">
+        <h2 style="font-size: 30px;">تعديل الملف الشخصي</h2>
+        <p>
+            يمكنك تعديل بياناتك الشخصية من خلال هذه الفورمة.
+            قم بتحديث الحقول واضغط على "حفظ التعديلات" لتطبيق التغييرات.
+        </p>
+    </div>
+    <!-- ========= المحتوى الرئيسي: فورمة تعديل الملف الشخصي ========= -->
+    <div class="main-content">
+        <div class="about-container" style="margin-bottom: 40px;">
+            <h2>
+                <i class="fas fa-user-edit"></i> تعديل الملف الشخصي
+            </h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="profilePic">الصورة الشخصية:</label>
+                    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل:</label>
+                    <input type="text" id="fullName" name="fullName" value="أيمن سلامة" required>
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle">المسمى الوظيفي:</label>
+                    <input type="text" id="jobTitle" name="jobTitle" value="مطور ويب ومصمم واجهات مستخدم" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" value="ayman@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="text" id="phone" name="phone" value="01000000000" required>
+                </div>
+                <div class="form-group">
+                    <label for="bio">نبذة عنك:</label>
+                    <textarea id="bio" name="bio" rows="3" required>مطور ويب بخبرة في تصميم وتطوير المواقع والتطبيقات الحديثة. شغوف بالتقنية وتعلم كل جديد في عالم البرمجة.</textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="login-button">حفظ التعديلات</button>
+                  
+                        <a asp-controller="dashboard" asp-action="profile"><button type="button" class="cancel-btn">إلغاء</button></a>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .AymanProfileBox {
+            background: #222c;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            padding: 28px 22px 18px 22px;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+        }
+        .AymanProfileHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #4446;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+        .AymanProfileHeader .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #25d366;
+            box-shadow: 0 2px 12px #0002;
+            object-fit: cover;
+            background: #fff;
+        }
+        .AymanProfileHeader .profile-info {
+            flex: 1;
+            text-align: center;
+        }
+        .AymanProfileHeader .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .AymanProfileHeader .profile-title {
+            color: #eee;
+            font-size: 15px;
+        }
+        .AymanProfileHeader .profile-date {
+            color: #aaa;
+            font-size: 14px;
+            min-width: 80px;
+            text-align: left;
+            direction: ltr;
+        }
+        .AymanProfileDetails {
+            margin-top: 10px;
+        }
+        .AymanProfileDetails .detail-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        .AymanProfileDetails .detail-label {
+            color: #ffffff;
+            font-weight: bold;
+            min-width: 110px;
+            font-size: 15px;
+        }
+        .AymanProfileDetails .detail-value {
+            color: #fff;
+            font-size: 15px;
+            margin-right: 12px;
+            word-break: break-word;
+        }
+        .AymanProfileDetails .detail-bio {
+            color: #aaa;
+            font-size: 15px;
+            margin-right: 0;
+            margin-top: 6px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+<div class="Ayman">
+    <!-- الهيدر -->
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <!-- شريط التنقل -->
+    <center>
+        <div class="A2_Navbar">
+            <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <!-- مقدمة الصفحة -->
+    <div class="A3_Intro">
+        <h2 style="font-size: 30px;">الملف الشخصي</h2>
+        <p>استعراض بياناتك الشخصية بشكل أنيق واحترافي.</p>
+    </div>
+</div>
+<!-- محتوى الملف الشخصي (استعراضي فقط) -->
+<div class="main-content">
+    <div class="AymanProfileBox">
+        <div class="AymanProfileHeader">
+            <img src="../photo/benefits-of-custom-web-development-and-web-design-12grids.jpg" alt="صورة المستخدم" class="profile-img">
+            <div class="profile-info">
+                <div class="profile-name"><i class="fas fa-user"></i> أيمن سلامة</div>
+                <div class="profile-title">مطور ويب ومصمم واجهات مستخدم</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                <span style="color:#aaa; font-size:13px; margin-bottom:2px;">تاريخ إنشاء الحساب</span>
+                <div class="profile-date">2025-05-30</div>
+            </div>
+        </div>
+        <div class="AymanProfileDetails">
+            <div class="detail-row">
+                <span class="detail-label">البريد الإلكتروني:</span>
+                <span class="detail-value">ayman@email.com</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">رقم الهاتف:</span>
+                <span class="detail-value">01000000000</span>
+            </div>
+            <div class="detail-row" style="align-items: flex-start;">
+                <span class="detail-label">نبذة عنك:</span>
+                <span class="detail-value">مطور ويب بخبرة في تصميم وتطوير المواقع والتطبيقات الحديثة. شغوف بالتقنية وتعلم كل جديد في عالم البرمجة.</span>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:18px;">
+                <a asp-controller="dashboard" asp-action="edit_profile"><button class="login-button">تعديل الملف الشخصي</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

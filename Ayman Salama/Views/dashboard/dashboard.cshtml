@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الموقع</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="dashboard.css"><!-- ملف CSS خاص للوحة التحكم لو أردت -->
+</head>
+<body>
+<div class="Ayman">
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <center>
+        <div class="A2_Navbar">
+
+<div class="animate__animated animate__zoomIn mb-4">
+
+
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+</div>
+        </div>
+    </center>
+    <br>
+<div class="A3_Intro">
+
+    <h2 style="font-size: 30px;">لوحة تحكم الموقع</h2>
+
+    <p >
+        من خلال هذه اللوحة يمكنك إدارة جميع محتويات موقعك بسهولة: تعديل الصفحة الرئيسية، إدارة المشاريع، مراجعة الرسائل، وتخصيص بياناتك الشخصية. استخدم القائمة بالأعلى للانتقال بين أقسام الإدارة المختلفة.
+    </p>
+</div>
+    <div class="main-content">
+        <div class="about-container" style="margin-bottom: 40px;">
+            <h2>تعديل الصفحة الرئيسية</h2>
+
+
+                <form asp-action="Edit" asp-controller="Dashboard" method="post">
+                    <label>عنوان الصفحة الرئيسية:</label>
+                    <input type="text" name="title" value="@ViewBag.MainTitle" placeholder="أدخل عنون جديد  للصفحه الرئيسية هنا ..." style="width:100%;margin-bottom:10px;">
+                <label>وصف مختصر:</label>
+                    <textarea name="description" rows="3" style="width:100%;" placeholder="أدخل اسم وصف جديد مختصر...">@ViewBag.MainDesc</textarea>
+                <br><br>
+                <button type="submit" class="login-button">حفظ التعديلات</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+    <h1>لوحة التحكم</h1>
+    <p>@ViewBag.Title</p>
+    <p>@ViewBag.Description</p>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<style>
+        /* تحسين شكل البوكسات داخل صفحة إضافة مشروع جديد */
+        .about-container {
+            background-color: #0000006c;
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            color: #fff;
+            width: 450px;
+            max-width: 95vw;
+            margin: 0 auto 40px auto !important;
+            float: none;
+        }
+
+        .about-container h2 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-container .form-group {
+            margin-bottom: 18px;
+        }
+
+        .about-container label {
+            display: block;
+            margin-bottom: 6px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .about-container input[type="text"],
+        .about-container input[type="date"],
+        .about-container input[type="url"],
+        .about-container input[type="file"],
+        .about-container textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .about-container input[type="file"] {
+            background: #f7f7f7;
+            color: #222;
+            padding: 8px 12px;
+        }
+
+        .about-container input:focus,
+        .about-container textarea:focus {
+            border-color: #25d366;
+            outline: none;
+        }
+
+        .about-container button.login-button {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+    </style>

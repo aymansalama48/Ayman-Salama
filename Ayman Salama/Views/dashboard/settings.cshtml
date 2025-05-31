@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ========= إعدادات الصفحة الأساسية ========= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات - لوحة تحكم الموقع</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .AymanSettingsBox {
+            background: #222c;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            padding: 28px 22px;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .AymanSettingsBox h2 {
+            color: #25d366;
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .AymanSettingsBox .setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .AymanSettingsBox label {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .AymanSettingsBox input[type="text"],
+        .AymanSettingsBox input[type="email"],
+        .AymanSettingsBox input[type="password"],
+        .AymanSettingsBox select,
+        .AymanSettingsBox textarea {
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #222;
+            font-size: 15px;
+            margin-right: 8px;
+            min-width: 120px;
+            margin-bottom: 0;
+        }
+        .AymanSettingsBox input[type="checkbox"] {
+            margin-left: 8px;
+            transform: scale(1.2);
+        }
+        .AymanSettingsBox textarea {
+            width: 100%;
+            min-height: 60px;
+            margin-top: 6px;
+        }
+        .AymanSettingsBox hr {
+            margin: 22px 0;
+            border-color: #333;
+        }
+        .AymanSettingsBox .save-btn {
+            width: 100%;
+            padding: 10px 0;
+            background: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 18px;
+            transition: background 0.2s;
+        }
+        .AymanSettingsBox .save-btn:hover {
+            background: #1da851;
+        }
+        .AymanSettingsBox .danger {
+            color: #ea4335;
+        }
+        .AymanSettingsBox .danger-btn {
+            background: #ea4335;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background 0.2s;
+        }
+        .AymanSettingsBox .danger-btn:hover {
+            background: #c62828;
+        }
+    </style>
+</head>
+<body>
+<div class="Ayman">
+    <!-- ========= هيدر الموقع ========= -->
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <!-- ========= شريط التنقل ========= -->
+    <center>
+        <div class="A2_Navbar">
+            <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <!-- ========= مقدمة الصفحة ========= -->
+    <div class="A3_Intro">
+        <h2 style="font-size: 30px;">إعدادات لوحة التحكم</h2>
+        <p>يمكنك هنا تخصيص جميع إعدادات حسابك ولوحة التحكم.</p>
+    </div>
+    <!-- ========= محتوى الإعدادات ========= -->
+    <div class="main-content">
+        <div class="AymanSettingsBox">
+            <h2><i class="fas fa-cogs"></i> إعدادات الحساب</h2>
+            <div class="setting-row">
+                <label for="fullName">الاسم الكامل</label>
+                <input type="text" id="fullName" value="أيمن سلامة">
+            </div>
+            <div class="setting-row">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" value="ayman@email.com">
+            </div>
+            <div class="setting-row">
+                <label for="phone">رقم الهاتف</label>
+                <input type="text" id="phone" value="01000000000">
+            </div>
+            <div class="setting-row">
+                <label for="bio">نبذة عنك</label>
+                <textarea id="bio">مطور ويب بخبرة في تصميم وتطوير المواقع والتطبيقات الحديثة.</textarea>
+            </div>
+            <hr>
+            <h2><i class="fas fa-desktop"></i> إعدادات الواجهة</h2>
+            <div class="setting-row">
+                <label for="darkMode">تفعيل الوضع الليلي</label>
+                <input type="checkbox" id="darkMode">
+            </div>
+            <div class="setting-row">
+                <label for="langSelect">لغة لوحة التحكم</label>
+                <select id="langSelect">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="setting-row">
+                <label for="fontSize">حجم الخط</label>
+                <select id="fontSize">
+                    <option value="normal">عادي</option>
+                    <option value="large">كبير</option>
+                    <option value="xlarge">كبير جداً</option>
+                </select>
+            </div>
+            <hr>
+            <h2><i class="fas fa-bell"></i> إعدادات الإشعارات</h2>
+            <div class="setting-row">
+                <label for="emailNotif">إشعارات البريد الإلكتروني</label>
+                <input type="checkbox" id="emailNotif" checked>
+            </div>
+            <div class="setting-row">
+                <label for="smsNotif">إشعارات الرسائل النصية</label>
+                <input type="checkbox" id="smsNotif">
+            </div>
+            <div class="setting-row">
+                <label for="siteNotif">إشعارات داخل الموقع</label>
+                <input type="checkbox" id="siteNotif" checked>
+            </div>
+            <hr>
+            <h2><i class="fas fa-shield-alt"></i> إعدادات الأمان</h2>
+            <div class="setting-row">
+                <label for="changePass">تغيير كلمة المرور</label>
+                <button class="save-btn" style="width:auto; padding:4px 18px; font-size:14px;" onclick="alert('سيتم توجيهك لتغيير كلمة المرور');">تغيير</button>
+            </div>
+            <div class="setting-row">
+                <label for="twoFactor">تفعيل التحقق بخطوتين</label>
+                <input type="checkbox" id="twoFactor">
+            </div>
+            <div class="setting-row">
+                <label for="sessions">إدارة الجلسات النشطة</label>
+                <button class="save-btn" style="width:auto; padding:4px 18px; font-size:14px;" onclick="alert('عرض الجلسات النشطة');">عرض</button>
+            </div>
+            <hr>
+            <h2><i class="fas fa-database"></i> إعدادات متقدمة</h2>
+            <div class="setting-row">
+                <label for="backup">تنزيل نسخة احتياطية من البيانات</label>
+                <button class="save-btn" style="width:auto; padding:4px 18px; font-size:14px;" onclick="alert('سيتم تنزيل نسخة احتياطية');">تنزيل</button>
+            </div>
+            <div class="setting-row">
+                <label for="apiAccess">تفعيل الوصول للـ API</label>
+                <input type="checkbox" id="apiAccess">
+            </div>
+            <hr>
+            <h2 class="danger"><i class="fas fa-user-times"></i> إجراءات خطيرة</h2>
+            <div class="setting-row">
+                <label for="deleteAccount" class="danger">حذف الحساب نهائياً</label>
+                <button class="danger-btn" onclick="if(confirm('هل أنت متأكد من حذف الحساب؟')){alert('تم حذف الحساب!');}">حذف</button>
+            </div>
+            <button class="save-btn">حفظ الإعدادات</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

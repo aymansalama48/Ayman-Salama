@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ========= إعدادات الصفحة الأساسية لجعلها متجاوبة ========= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    
+    <!-- ========= استيراد مكتبات خارجية للأنيميشن والأيقونات ========= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    
+    <!-- ========= استيراد ملفات CSS المنظمة ========= -->
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    
+    <!-- ========= زر تسجيل الدخول في أعلى الصفحة ========= -->
+    <div class="login-button-container">
+        <a asp-action="Login" class="login-button">تسجيل الدخول</a>
+    </div>
+
+    <!-- ملاحظة: تأكد من عدم وجود تعارض مع قواعد CSS الأخرى -->
+</head>
+<body>
+
+    <div class="Ayman">
+
+        <div class="A1">
+
+            <a asp-controller="Home" asp-action="Index">
+
+                <h1 class="animate__heartBeat">Ayman Salama</h1>
+
+
+            </a>
+        </div>
+
+
+
+
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+        <center>
+
+            <div class="A2_Navbar">
+                <!-- روابط التنقل -->
+                <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="Home" asp-action="Index">🏠 الرئيسية</a>
+                    <a asp-controller="Home" asp-action="About">👤 من أنا</a>
+                    <a asp-controller="Home" asp-action="Skills">🧠 المهارات</a>
+                    <a asp-controller="Home" asp-action="Projects">📁 المشاريع</a>
+                    <a asp-controller="Home" asp-action="Goals">🎯 الأهداف</a>
+                    <a asp-controller="Home" asp-action="Contact" class="active">📬 تواصل معنا</a>
+                </div>
+            </div>
+
+
+        </center>
+
+       <!-- ========= قسم المقدمة ========= -->
+        <section class="A3_Intro">
+            <h2 style="font-size: 30px;">مشاريعي</h2>
+            <p>
+                هنا ستجد مجموعة من المشاريع التي عملت عليها أو أعمل عليها حالياً في مجال تطوير الويب والبرمجة.
+            </p>
+        </section>
+    </div>
+    
+    <!-- ========= المحتوى الرئيسي: عرض مشروع ========= -->
+    <main class="main-content">
+        <div class="skills-container">
+            <!-- عنوان المشروع -->
+            <h2>المشروع 1</h2>
+            
+            <!-- عنصر الشكل لعرض صورة المشروع مع وصف -->
+            <figure>
+                <a asp-controller="Home" asp-action="projectdetails">
+                    <img src="../photo/أفضل-مواقع-التسوق-وأكثرها-شهرة-وموثوقية-على-الإطلاق-2020.jpg" alt="مشروع أول">
+                </a>
+                <a asp-controller="Home" asp-action="projectdetails" >
+                    <figcaption style="cursor:pointer;">الصورة 10: وصف للصورة</figcaption>
+                </a>
+            </figure>
+            
+            <!-- قائمة تفاصيل المشروع -->
+            <ul>
+                <li>HTML: كتابة الهيكل الأساسي لصفحات الويب</li>
+                <li>CSS: تنسيق وتصميم الصفحات بشكل جذاب واحترافي</li>
+                <li>JavaScript: إضافة التفاعلية للمواقع وإنشاء تطبيقات ديناميكية</li>
+                <li>C#: بناء منطق التطبيقات باستخدام البرمجة الكائنية</li>
+            </ul>
+        </div>
+    </main>
+    
+    <!-- ========= الفوتر: معلومات التواصل وروابط الشبكات الاجتماعية ========= -->
+    <footer class="A6_Footer">
+        <div class="A5_Marque">
+            <marquee behavior="" direction="right">
+                مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.
+            </marquee>
+            <br><br>
+            <p class="custom-paragraph">
+                نحن نُعتبر الخيار الأمثل لعملائنا الباحثين عن تطبيقات تقنية متقدمة وخدمات احترافية. كما تضمن شركتنا تلبية احتياجات العملاء وتقديم حلول مبتكرة تساعدهم على النجاح في العالم الرقمي.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ayman.salama.48" target="_blank" class="facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/1501435003" target="_blank" class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <br><br><br>
+        </div>
+        <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+    <!-- ========= أكواد CSS لتعديل أبعاد الصورة داخل المشاريع ========= -->
+    <style>
+        /* نجعل أبعاد الصورة في صفحة المشاريع مطابقة لتلك الموجودة في الصفحة الرئيسية */
+        .skills-container figure img {
+            width: 98%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto 8px auto;
+            display: block;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px #0002;
+            cursor: pointer;
+        }
+        .skills-container figure img:hover {
+            transform: scale(1.06) rotate(-1deg);
+            box-shadow: 0 8px 32px #ffffff66, 0 2px 16px #0004;
+            filter: brightness(1.08);
+        }
+        
+        /* تحسين شريط التنقل للموبايل */
+/* 
+        .A2_Navbar a {
+            display: inline-block;
+           
+        } */
+
+     
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

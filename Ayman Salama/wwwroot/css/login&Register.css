@@ -1,0 +1,195 @@
+.login-button {
+background-color: #000000; /* لون خلفية الزر */
+    color: #fff; /* لون النص */
+    border: none; /* إزالة الإطار */
+    border-radius: 20px; /* زوايا دائرية */
+    padding: 10px 30px; /* مسافة داخلية */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير ظل */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثير انتقال للخلفية ولون النص */
+}
+
+
+.login-button:hover {
+    background-color: rgb(255, 255, 255);
+border-radius: 20px;
+color: rgb(0, 0, 0);
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* تأثير ظل عند التمرير */
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.login-container {
+    background-color: #0000006c; /* لون خلفية النموذج */
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000; /* لون النص */
+    width: 400px; /* عرض النموذج */
+    max-width: 95vw;
+    margin: 0 auto; /* محاذاة النموذج في المنتصف */
+}
+
+
+
+
+.login-container h2 {
+    text-align: center;
+    color: #ffffff; /* لون النص */
+    background-color: #0000006c; /* لون خلفية العنوان */
+    padding: 10px;
+    border-radius: 30px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير ظل */
+    inline-size: 200px; /* تحديد عرض العنوان */
+    font-size:auto;
+    font-weight: bold; /* جعل العنوان عريض */
+    margin: 0 auto; /* محاذاة العنوان في المنتصف */
+}
+
+
+
+
+
+
+
+
+
+
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+.login-container label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffdbdb; /* لون النص */
+}
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc; /* لون الإطار */
+    border-radius: 20px;
+    font-size: 16px;
+    color: #ffffff; /* لون النص */
+    background-color: #ffffffdb; /* لون خلفية الحقول */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* تأثير ظل */
+    transition: border-color 0.3s ease; /* تأثير انتقال للإطار */
+}
+
+.login-container textarea#message {
+    width: 75%;                /* أعرض من حقل الاسم */
+    min-height: 100px;         /* ارتفاع أكبر */
+    padding: 12px;             /* مسافة داخلية أكبر */
+    border: 1px solid #ccc;    /* نفس إطار الحقول */
+    border-radius: 20px;       /* زوايا دائرية مثل الحقول */
+    font-size: 17px;           /* خط أكبر قليلاً */
+    color: #ffffff;            /* لون النص */
+    background-color: #ffffffdb; /* نفس خلفية الحقول */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+    resize: vertical;          /* يسمح بتغيير الحجم عمودياً فقط */
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+
+
+.options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.options a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.options a:hover {
+    color: #ffffff86;
+    text-decoration: underline; /* إضافة خط تحت النص عند التمرير */
+}
+
+.options span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+
+.options .social-icons {
+    display: flex;
+    flex-direction: row;      /* تأكد أن الأيقونات بجانب بعض */
+    justify-content: center;
+    align-items: center;
+    margin: 18px auto 0 auto;
+    gap: 14px;                /* تقليل المسافة بينهم */
+}
+
+.options .social-icons a {
+    width: 40px;              /* تصغير الحجم */
+    height: 36px;
+    font-size: 18px;
+    border-radius: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    text-decoration: none;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+.options .social-icons a.facebook-icon {
+    background: linear-gradient(135deg, #1877f2 60%, #145db2 100%);
+    color: #fff;
+}
+.options .social-icons a.whatsapp-icon {
+    background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+    color: #fff;
+}
+.options .social-icons a[title="الهاتف"] {
+    background: linear-gradient(135deg, #444 60%, #111 100%);
+    color: #fff;
+}
+.options .social-icons a[title="البريد الإلكتروني"] {
+    background: linear-gradient(135deg, #ea4335 60%, #b31412 100%);
+    color: #fff;
+}
+
+.options .social-icons a:hover {
+    transform: scale(1.18) rotate(-6deg);
+    filter: brightness(1.18);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 90%; /* عرض النموذج على الشاشات الصغيرة */
+        padding: 30px 20px; /* تقليل المسافة الداخلية */
+    }
+    .login-container h2 {
+        font-size: 24px; /* تقليل حجم الخط على الشاشات الصغيرة */
+    }
+    
+}

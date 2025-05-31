@@ -1,0 +1,148 @@
+@model SendMesaage
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ========= إعدادات الصفحة الأساسية ========= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الرسالة</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/AymanHome.css")" />
+
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+<div class="Ayman">
+    <!-- ========= هيدر الموقع ========= -->
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <!-- ========= شريط التنقل ========= -->
+    <center>
+        <div class="A2_Navbar">
+            <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <!-- ========= مقدمة الصفحة ========= -->
+    <div class="A3_Intro">
+        <h2 style="font-size: 30px;">عرض الرسالة</h2>
+        <p>يمكنك هنا قراءة تفاصيل الرسالة الواردة من الزائر.</p>
+    </div>
+</div>
+
+<!-- ========= محتوى عرض رسالة واحدة ========= -->
+<div class="main-content">
+    <div class="about-container" style="margin-bottom: 40px;">
+        <br><br>
+
+
+        <!-- صندوق الرسالة -->
+<div class="AymanMessageBox">
+    <br>
+    <br>
+    <h2 style="text-align:center;">@Model.Name</h2>
+    <div class="AymanMessageHeader" style="display: flex; align-items: center;">
+        <br>
+        <br>
+        <!-- التاريخ في أقصى الشمال -->
+        <span style="flex:1; text-align:left;">
+                        <span class="AymanMessageDate" style="font-size:14px; color:#aaa;">@Model.Date</span>
+        </span>
+    </div>
+    <center>
+
+        <div class="AymanMessageBody">
+            
+            <p >
+
+                            @Model.Subject
+                        </p>
+        </div>
+    </center>
+    <div class="AymanMessageEmail">
+        البريد: @Model.Email
+    </div>
+<center>
+                
+                <div class="AymanMessageButtons" >
+                        <a asp-controller="dashboard" asp-action="messages">  <button class="login-button" >عودة لصندوق الرسائل</button></a>
+                    <button class="login-button delete" onclick="deleteMessage(this);">حذف</button>
+                </div>
+            </center></div>
+
+            </body>
+
+         
+
+<!-- ...existing code... -->
+<style>
+/* ==== تصميم صناديق الرسائل ==== */
+.AymanMessageBox {
+    background: #222c;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    padding: 18px 14px;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    width: 100%;
+    word-break: break-word; /* مهم لمنع خروج النص الطويل */
+    box-sizing: border-box;
+}
+
+.AymanMessageHeader {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.AymanMessageBody p{
+    
+    padding: 20px;
+    border-radius: 20px;
+    word-break: break-word; /* مهم جداً للنص الطويل */
+    background-color: #5b5b5b95
+    ;
+    font-size: 30px;
+    
+
+   
+}
+
+.AymanMessageEmail {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.AymanMessageButtons {
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+
+    
+    .AymanMessageButtons .delete {
+    background: #ea4335;
+    color: #fff;
+}
+</style>
+</html>

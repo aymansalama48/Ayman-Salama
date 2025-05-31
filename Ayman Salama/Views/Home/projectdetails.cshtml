@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المشروع</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .ProjectViewBox {
+            background: #222c;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            padding: 32px 24px 24px 24px;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+        }
+
+            .ProjectViewBox .project-img {
+                width: 100%;
+                max-width: 320px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 12px;
+                margin-bottom: 18px;
+                box-shadow: 0 2px 12px #0002;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ProjectViewBox h2 {
+                color: #ffffff;
+                font-size: 26px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .ProjectViewBox .project-meta {
+                color: #aaa;
+                font-size: 14px;
+                margin-bottom: 18px;
+                text-align: center;
+            }
+
+            .ProjectViewBox .project-desc {
+                font-size: 17px;
+                color: #fff;
+                margin-bottom: 18px;
+                line-height: 1.8;
+                text-align: right;
+            }
+
+            .ProjectViewBox .project-actions {
+                text-align: center;
+                margin-top: 18px;
+            }
+
+                .ProjectViewBox .project-actions .login-button {
+                    padding: 8px 28px;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    background: #0a9776;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    margin: 0 8px;
+                    transition: background 0.2s;
+                }
+
+                    .ProjectViewBox .project-actions .login-button:hover {
+                        background: #ffffff;
+                        color: #000000;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                    }
+    </style>
+    <div class="login-button-container">
+        <a asp-action="Login" class="login-button">تسجيل الدخول</a>
+    </div>
+
+</head>
+<body>
+
+    <div class="Ayman">
+
+        <div class="A1">
+
+            <a asp-controller="Home" asp-action="Index">
+
+                <h1 class="animate__heartBeat">Ayman Salama</h1>
+
+
+            </a>
+        </div>
+
+
+
+
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+        <center>
+
+            <div class="A2_Navbar">
+                <!-- روابط التنقل -->
+                <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="Home" asp-action="Index">🏠 الرئيسية</a>
+                    <a asp-controller="Home" asp-action="About">👤 من أنا</a>
+                    <a asp-controller="Home" asp-action="Skills">🧠 المهارات</a>
+                    <a asp-controller="Home" asp-action="Projects">📁 المشاريع</a>
+                    <a asp-controller="Home" asp-action="Goals">🎯 الأهداف</a>
+                    <a asp-controller="Home" asp-action="Contact" class="active">📬 تواصل معنا</a>
+                </div>
+            </div>
+
+
+        </center>
+        <br>
+</div>
+<!-- محتوى عرض المشروع -->
+<div class="main-content">
+    <div class="ProjectViewBox">
+        <h2>اسم المشروع التجريبي</h2>
+            <img src="../photo/istockphoto-1266459481-612x612.jpg" alt="صورة المشروع" class="project-img">
+        <div class="project-meta">
+            <span>تاريخ الإنشاء: 2025-05-30</span> |
+            <span>الحالة: مكتمل</span>
+        </div>
+        <div class="project-desc">
+            هذا المشروع عبارة عن موقع ويب متكامل تم تطويره باستخدام أحدث تقنيات الويب. يضم لوحة تحكم احترافية وتصميم متجاوب مع جميع الأجهزة، ويحتوي على العديد من المميزات التي تلبي احتياجات العميل.
+        </div>
+
+        <div class="project-actions">
+                <a asp-controller="Home" asp-action="Projects"> <button class="login-button" onclick="window.location.href='projects.html';">عودة للمشاريع</button></a>
+            <button class="login-button" onclick="window.open('https://ayman-sample-project.com','_blank');">زيارة المشروع</button>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="A6_Footer">
+
+    <div class="A5_Marque">
+
+        <marquee behavior="" direction="right">
+            مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم. أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.
+        </marquee>
+        <br>
+        <br>
+
+        <p class="custom-paragraph">
+            نحن نُعتبر الخيار الأمثل لعملائنا الباحثين
+            عن تطبيقات تقنية متقدمة وخدمات
+            احترافية. كما تضمن شركتنا تلبية
+            احتياجات العملاء وتقديم حلول مبتكرة
+            تساعدهم على النجاح في العالم
+            الرقمي.
+        </p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ayman.salama.48" target="_blank" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/1501435003" target="_blank" class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الموقع</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="dashboard.css"><!-- ملف CSS خاص للوحة التحكم لو أردت -->
+</head>
+<body>
+<div class="Ayman">
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <center>
+        <div class="A2_Navbar">
+
+<div class="animate__animated animate__zoomIn mb-4">
+
+
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+</div>
+        </div>
+    </center>
+        <br>
+        
+        <!-- ========= مقدمة الصفحة ========= -->
+        <div class="A3_Intro">
+            <h2 style="font-size: 30px;">إضافة مشروع</h2>
+            <p>
+                قم بملئ البيانات أدناه لإضافة مشروع جديد إلى موقعك.
+            </p>
+        </div>
+        
+        <!-- ========= المحتوى الرئيسي: فورمة إضافة المشروع ========= -->
+        <div class="main-content">
+            <div class="about-container" style="margin-bottom: 40px;">
+                <h2 style="text-align:center; margin-bottom: 30px;">
+                    <i class="fas fa-plus-circle"></i> إضافة مشروع جديد
+                </h2>
+                <form action="process_addproject.html" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="projectName">اسم المشروع:</label>
+                        <input type="text" id="projectName" name="projectName" placeholder="أدخل اسم المشروع" required style="width:100%;margin-bottom:12px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDesc">وصف المشروع:</label>
+                        <textarea id="projectDesc" name="projectDesc" rows="3" placeholder="أدخل وصف المشروع" required style="width:100%;margin-bottom:12px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDate">تاريخ الإضافة:</label>
+                        <input type="date" id="projectDate" name="projectDate" required style="width:100%;margin-bottom:12px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectStatus">الحالة:</label>
+                        <select id="projectStatus" name="projectStatus" required style="width:100%;margin-bottom:12px; border-radius: 15px; padding: 10px 12px; border: 1px solid #ccc;">
+                            <option value="مكتمل">مكتمل</option>
+                            <option value="قيد التنفيذ">قيد التنفيذ</option>
+                            <option value="مخطط له">مخطط له</option>
+                            <option value="مؤجل">مؤجل</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectLink">رابط المشروع (اختياري):</label>
+                        <input type="url" id="projectLink" name="projectLink" placeholder="https://example.com" style="width:100%;margin-bottom:12px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectImage">صورة المشروع:</label>
+                        <input type="file" id="projectImage" name="projectImage" accept="image/*" style="width:100%;margin-bottom:12px;">
+                    </div>
+                    <button type="submit" class="login-button" style="width:100%;">حفظ المشروع</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    <!-- ========= تضمين CSS خاص بنمط البوكسات مثل صفحة إضافة مشروع ========= -->
+    <style>
+        /* التنسيق نفسه المستخدم في صفحة إضافة مشروع */
+        .about-container {
+            background-color: #0000006c;
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            color: #fff;
+            width: 450px;
+            max-width: 95vw;
+            margin: 0 auto 40px auto !important;
+            float: none;
+        }
+
+        .about-container h2 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-container .form-group {
+            margin-bottom: 18px;
+        }
+
+        .about-container label {
+            display: block;
+            margin-bottom: 6px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .about-container input[type="text"],
+        .about-container input[type="date"],
+        .about-container input[type="url"],
+        .about-container input[type="file"],
+        .about-container textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        
+        .about-container input[type="file"] {
+            background: #f7f7f7;
+            color: #222;
+            padding: 8px 12px;
+        }
+        
+        .about-container input:focus,
+        .about-container textarea:focus {
+            border-color: #25d366;
+            outline: none;
+        }
+
+        .about-container button.login-button {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+    </style>

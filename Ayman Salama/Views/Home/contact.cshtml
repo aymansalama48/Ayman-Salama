@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- إعدادات الصفحة الأساسية لجعلها متجاوبة -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+
+    <!-- استيراد مكتبات خارجية للأنيميشن والأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- استيراد ملفات CSS المنظمة -->
+    <!-- التنسيقات العامة للموقع -->
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <!-- تنسيقات النماذج والأزرار -->
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <!-- تنسيقات صفحة التواصل (يمكنك تنظيمها لاحقاً ضمن /css/pages/) -->
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <!-- زر تسجيل الدخول في أعلى الصفحة -->
+    <div class="login-button-container">
+        <a asp-action="Login" class="login-button">تسجيل الدخول</a>
+    </div>
+</head>
+<body>
+    <div class="Ayman">
+
+        <div class="A1">
+
+            <a asp-controller="Home" asp-action="Index">
+
+                <h1 class="animate__heartBeat">Ayman Salama</h1>
+
+
+            </a>
+        </div>
+
+
+
+
+        <!-- ----------------------------------------------------------  -->
+
+        <br>
+        <br>
+
+        <!-- ----------------------------------------------------------  -->
+
+        <center>
+
+            <div class="A2_Navbar">
+                <!-- روابط التنقل -->
+                <div class="animate__animated animate__zoomIn mb-4">
+                    <a asp-controller="Home" asp-action="Index">🏠 الرئيسية</a>
+                    <a asp-controller="Home" asp-action="About">👤 من أنا</a>
+                    <a asp-controller="Home" asp-action="Skills">🧠 المهارات</a>
+                    <a asp-controller="Home" asp-action="Projects">📁 المشاريع</a>
+                    <a asp-controller="Home" asp-action="Goals">🎯 الأهداف</a>
+                    <a asp-controller="Home" asp-action="Contact" class="active">📬 تواصل معنا</a>
+                </div>
+            </div>
+
+
+        </center>
+        <!-- ========== مقدمة الصفحة ========== -->
+        <br>
+        <div class="A3_Intro">
+            <!-- عنوان المقدمة -->
+            <h2 style="font-size:30px;">تواصل معنا لأي استفسار أو اقتراح</h2>
+            <!-- وصف موجز للهدف من الصفحة -->
+            <p>
+                يمكنك التواصل معنا عبر النموذج التالي أو من خلال وسائل التواصل الاجتماعي.
+            </p>
+        </div>
+
+        <!-- ========== المحتوى الرئيسي: نموذج التواصل ========== -->
+        <div class="main-content">
+            <div class="login-container">
+                <!-- عنوان نموذج التواصل -->
+                <h2>نموذج التواصل</h2>
+                <br>
+                <!-- نموذج تواصل بسيط -->
+                <form asp-action="SendMessage" method="POST">
+                    <!-- حقل الاسم الكامل -->
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+                    </div>
+                    <!-- حقل البريد الإلكتروني -->
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <!-- حقل الرسالة -->
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
+                    <!-- زر إرسال النموذج -->
+                    <button type="submit" class="login-button">إرسال</button>
+                </form>
+                <!-- خيارات التواصل البديلة -->
+                <div class="options">
+                    <span>أو تواصل معنا عبر:</span>
+                    <div class="social-icons" style="margin-top: 10px;">
+                        <!-- البريد الإلكتروني -->
+                        <a href="mailto:aymansalama48@yahoo.com" class="facebook-icon" title="البريد الإلكتروني" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <!-- الهاتف -->
+                        <a href="tel:201501435003" class="facebook-icon" title="الهاتف">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <!-- واتساب -->
+                        <a href="https://wa.me/1501435003" class="whatsapp-icon" title="واتساب" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <!-- فيسبوك -->
+                        <a href="https://www.facebook.com/ayman.salama.48" class="facebook-icon" title="فيسبوك" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== الفوتر: معلومات التواصل وروابط الشبكات ========== -->
+    <footer class="A6_Footer">
+        <div class="A5_Marque">
+            <!-- شريط متحرك للترحيب وتعريف بالصفحة -->
+            <marquee behavior="" direction="right">
+                مرحبًا بكم في صفحتي الشخصية! أنا أيمن سلامة، مطور ويب ومصمم واجهات مستخدم.
+                أعمل على إنشاء تجارب رقمية مبتكرة وجذابة.
+            </marquee>
+            <br>
+            <br>
+            <!-- فقرة تعريفية توضح خدمات الموقع -->
+            <p class="custom-paragraph">
+                نحن نُعتبر الخيار الأمثل لعملائنا الباحثين عن تطبيقات تقنية متقدمة وخدمات احترافية.
+                كما تضمن شركتنا تلبية احتياجات العملاء وتقديم حلول مبتكرة تساعدهم على النجاح في العالم الرقمي.
+            </p>
+            <!-- روابط التواصل الاجتماعي في الفوتر -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ayman.salama.48" target="_blank" class="facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/1501435003" target="_blank" class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!-- حقوق النشر -->
+        <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

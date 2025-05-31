@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الموقع</title>
+    <link rel="stylesheet" href="../css/AymanHome.css">
+    <link rel="stylesheet" href="../css/login&Register.css">
+    <link rel="stylesheet" href="../css/about&skills.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="dashboard.css"><!-- ملف CSS خاص للوحة التحكم لو أردت -->
+</head>
+<body>
+<div class="Ayman">
+    <div class="A1">
+        <a href="../index.html">
+            <h1 class="animate__heartBeat">Ayman Salama</h1>
+        </a>
+    </div>
+    <br><br>
+    <center>
+        <div class="A2_Navbar">
+
+<div class="animate__animated animate__zoomIn mb-4">
+
+
+                    <a asp-controller="dashboard" asp-action="dashboard" class="active">🏠 لوحة التحكم</a>
+                    <a asp-controller="dashboard" asp-action="projectmanagement">📁 إدارة المشاريع</a>
+                    <a asp-controller="dashboard" asp-action="messages">📬 الرسائل</a>
+                    <a asp-controller="dashboard" asp-action="profile">👤 الملف الشخصي</a>
+                    <a asp-controller="dashboard" asp-action="settings">⚙️ الإعدادات</a>
+                    <a asp-controller="Home" asp-action="Index">🔙 عودة للموقع</a>
+</div>
+        </div>
+    </center>        <br>
+        <!-- ========= مقدمة لوحة التحكم ========= -->
+        <div class="A3_Intro">
+            <h2 style="font-size: 30px;">لوحة إدارة المشاريع</h2>
+            <p>
+                من خلال هذه الصفحة يمكنك إدارة مشاريعك بفعالية: حيث يمكنك إضافة مشاريع جديدة، تعديل أو حذف المشاريع القائمة، ومراجعة تفاصيل كل مشروع بدقة. استخدم الخيارات المتاحة في الجدول للتنقل وتحديث بيانات المشاريع حسب الحاجة.
+            </p>
+        </div>
+        <br><br>
+    </div>
+        
+        <!-- ========= المحتوى الرئيسي: إدارة المشاريع ========= -->
+        <div class="main-content">
+            <div class="about-container" style="margin-bottom: 40px;">
+                <!-- زر إضافة مشروع جديد -->
+                <a href="addproject.html" class="login-button" style="display:block; width:max-content; margin:0 auto 18px auto; text-align:center;">
+                    <i class="fas fa-plus-circle"></i> إضافة مشروع جديد
+                </a>
+                
+                <!-- جدول عرض تفاصيل المشاريع -->
+                <table class="project-table">
+                    
+                    <thead>
+                        
+                        <tr>
+                            <th>اسم المشروع</th>
+                            <th>الوصف</th>
+                            <th>تاريخ الإضافة</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>موقع شخصي</td>
+                            <td>موقع تعريفي احترافي</td>
+                            <td>2025-05-29</td>
+                            <td>
+                                <!-- استبدل زر "تعديل" الحالي بهذا الكود لتوجيه المستخدم إلى صفحة EditProject عند النقر -->
+                                <button class="login-button" onclick="window.location.href='EditProject.html';">تعديل</button>
+                                <button class="login-button delete">حذف</button>
+                            </td>
+                        </tr>
+                                                <!-- أضف المزيد من المشاريع هنا -->
+
+                        <tr>
+                            <td>تطبيق مهام</td>
+                            <td>تطبيق ويب لإدارة المهام</td>
+                            <td>2025-05-28</td>
+                            <td>
+                                <!-- استبدل زر "تعديل" الحالي بهذا الكود لتوجيه المستخدم إلى صفحة EditProject عند النقر -->
+                                <button class="login-button" onclick="window.location.href='EditProject.html';">تعديل</button>
+                                <button class="login-button delete">حذف</button>
+                            </td>
+                        </tr>
+                        <!-- أضف المزيد من المشاريع هنا -->
+                    </tbody>
+                </table>
+                <!-- شرح إضافي بسيط تحت الجدول -->
+                <div style="text-align:center; color:#ffffff; margin-top:30px;">
+                    يمكنك إضافة أو تعديل أو حذف المشاريع من هنا.
+                </div>
+            </div>
+        </div>
+    
+    <!-- ========= الفوتر: معلومات التواصل وروابط الشبكات الاجتماعية ========= -->
+    <footer class="A6_Footer">
+        <div class="A5_Marque">
+            <br><br><br>
+        </div>
+        <p>© 2025 أيمن سلامة. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
+
+
+    <style>
+        /* تنسيق الجدول ليكون متناسق مع باقي عناصر لوحة التحكم */
+        .project-table {
+            width: 100%;
+            background: #222c;
+            border-radius: 20px;
+            color: #fff;
+            margin-bottom: 18px;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        .project-table thead tr {
+            background: #f400007f;
+        }
+        .project-table th,
+        .project-table td {
+            padding: 10px;
+            text-align: center;
+                        border-radius: 20px  20px; ;
+
+        }
+        /* تنسيق أزرار الإجراءات داخل الجدول */
+        .project-table button.login-button {
+            padding: 4px 12px;
+            font-size: 14px;
+        }
+        .project-table button.login-button.delete {
+            background: #ea4335;
+            color: #fff;
+        }
+    </style>
